@@ -51,12 +51,16 @@ const PendingQuotesComponent = ({ quotes }: IProps) => {
         </CardTitle>
         <Divider />
         <CardContent>
-          <DataGrid
-            rows={quotes as IGetQuotes[]}
-            columns={columns}
-            rowHeight={30}
-            hideFooterPagination
-          />
+          {quotes ? (
+            <DataGrid
+              rows={quotes as IGetQuotes[]}
+              columns={columns}
+              rowHeight={30}
+              hideFooterPagination
+            />
+          ) : (
+            <h1>Loading...</h1>
+          )}
         </CardContent>
       </Card>
     </div>
