@@ -91,5 +91,5 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["./src/Migrations/*.ts", "node_modules", "./src/Infra/Database/Migrations/*.{ts,js}", "src/**/*.test.ts"]
+  "exclude": ["./src/Migrations/*.ts", "node_modules", "src/Migrations/*.{ts,js}", "src/**/*.test.ts"]
 }
