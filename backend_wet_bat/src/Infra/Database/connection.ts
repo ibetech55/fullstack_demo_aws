@@ -14,7 +14,7 @@ const AppDataSource = new DataSource({
   synchronize: false,
   logging: false,
   entities: [Contacts, Quotes],
-  migrations: ["./src/Infra/Database/Migrations/*.{ts,js}"],
+  migrations: process.env.NODE_ENV === 'production' ? [] : ['./src/Migrations/*.{ts,js}'],
   ssl: {
     rejectUnauthorized: false,
   },
